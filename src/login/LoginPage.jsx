@@ -274,6 +274,7 @@ class LoginPage extends React.Component {
               errorMessage={this.state.errors.password}
               floatingLabel={intl.formatMessage(messages['login.password.label'])}
             />
+            <button>Test</button>
             <StatefulButton
               name="sign-in"
               id="sign-in"
