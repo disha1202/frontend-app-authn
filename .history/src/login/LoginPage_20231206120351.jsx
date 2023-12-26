@@ -147,7 +147,7 @@ class LoginPage extends React.Component {
 
     if (email === '') {
       errors.emailOrUsername = this.props.intl.formatMessage(messages['email.validation.message']);
-    } else if (email.length < 2) {
+    } else if (email.length < 3) {
       errors.emailOrUsername = this.props.intl.formatMessage(messages['username.or.email.format.validation.less.chars.message']);
     } else {
       errors.emailOrUsername = '';
@@ -299,7 +299,6 @@ class LoginPage extends React.Component {
             </Link>
             {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
           </Form>
-          This is sample text
         </div>
       </>
     );

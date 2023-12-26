@@ -147,7 +147,7 @@ class LoginPage extends React.Component {
 
     if (email === '') {
       errors.emailOrUsername = this.props.intl.formatMessage(messages['email.validation.message']);
-    } else if (email.length < 2) {
+    } else if (email.length < 3) {
       errors.emailOrUsername = this.props.intl.formatMessage(messages['username.or.email.format.validation.less.chars.message']);
     } else {
       errors.emailOrUsername = '';
@@ -274,6 +274,7 @@ class LoginPage extends React.Component {
               errorMessage={this.state.errors.password}
               floatingLabel={intl.formatMessage(messages['login.password.label'])}
             />
+            <button>Test</button>
             <StatefulButton
               name="sign-in"
               id="sign-in"
@@ -299,7 +300,6 @@ class LoginPage extends React.Component {
             </Link>
             {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
           </Form>
-          This is sample text
         </div>
       </>
     );
